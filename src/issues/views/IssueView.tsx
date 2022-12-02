@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { LoadingIcon } from '../../shared/components/LoadingIcon';
 import { IssueComment } from '../components/IssueComment';
 import { useIssue } from '../hooks';
@@ -6,7 +6,6 @@ import { useIssue } from '../hooks';
 export const IssueView = () => {
   const params = useParams();
   const { id = '0' } = params;
-  const navigate = useNavigate();
 
   const { issueQuery, commentsQuery } = useIssue(+id);
 
@@ -15,7 +14,7 @@ export const IssueView = () => {
   }
 
   if (!issueQuery.data) {
-    return navigate('/issues/lists');
+    return <Navigate to="/issues/lists" />;
   }
 
   return (
