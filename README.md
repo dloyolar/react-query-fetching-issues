@@ -1,5 +1,5 @@
 # React - Issues
 
-1. Clonar repositorio
-2. Ejecutar ` yarn install`
-3. Abrir el URL del proyecto
+1. Cone repository
+2. run ` yarn install`
+3. Open project URL in browser
